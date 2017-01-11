@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-xs-6" id="item-name">Item</div>
+            <div class="col-xs-3" id="item-quantity">Quantity</div>
+            <div class="col-xs-3" id="add-remove">+  /  -</div>
+        </div>
+
+        <div class="item-seperator"></div>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="row">
+                <div class="col-xs-6" id="name-input">
+                    <input type="text" id="name" class="form-control" [ngModel]="item?.name" name="name" required>
+                </div>
+                <div class="col-xs-3" id="quantity-input">
+                    <input type="text" id="quantity" class="form-control" [ngModel]="item?.quantity" name="quantity">
+                </div>
+                <div class="col-xs-3" id="add-btn">
+                    <button class="btn btn-default" id="add-item" type="submit"><i class="fa fa-plus fa-2x" aria-hidden="true"id="plus" ></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
