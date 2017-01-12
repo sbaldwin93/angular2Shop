@@ -37,4 +37,7 @@ export class SigninComponent {
             password: new FormControl(null, Validators.required)
         });
     }
+    isLoggedIn() {
+        return this.authService.isLoggedIn()
+    }
 }

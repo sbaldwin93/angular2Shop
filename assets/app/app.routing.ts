@@ -10,7 +10,7 @@ import { User } from "./auth/user.model";
 import { AuthService } from "./auth/auth.service";
 
 const APP_ROUTES: Routes = [
-    { path: '', redirectTo: '/items/items', pathMatch: 'full' },
+    { path: '', redirectTo: '/auth/signin', pathMatch: 'full' },
     { path: 'messages', component: MessagesComponent },
     { path: 'auth', component: AuthenticationComponent, loadChildren: './auth/auth.module#AuthModule' },
     { path: 'items', component: ItemComponent, loadChildren: './items/item.module#ItemModule' },

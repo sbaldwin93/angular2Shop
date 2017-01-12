@@ -36,13 +36,15 @@ export class AuthService {
         localStorage.clear();
     }
 
+    
     isLoggedIn() {
         return localStorage.getItem('token') !== null;
     }
-    notLoggedIn() {
+    
+    loggedIn() {
         const check = localStorage.getItem('token');
-        if(check == null) {
-             return this.router.navigateByUrl('auth/signin');
+        if(check !== null) {
+             return this.router.navigateByUrl('items/items');
         }
     }
 }
