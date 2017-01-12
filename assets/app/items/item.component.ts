@@ -42,10 +42,10 @@ export class ItemComponent {
     belongsToUser() {
         return localStorage.getItem('userId') == this.item.userId;
     }
-    /*
+    isLoggedIn() {
+        return this.authService.isLoggedIn();
+    }
     ngOnInit() {
         return this.authService.notLoggedIn();
-    }*/
-    
-    
+    }    
 }

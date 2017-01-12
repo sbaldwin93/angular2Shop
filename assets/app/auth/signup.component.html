@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="col-md-8 col-md-offset-2" *ngIf="!isLoggedIn()">
+    <div class="col-md-8 col-md-offset-2">
         <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <h5 class="labels">First name</h5>
@@ -35,7 +35,7 @@
                         id="auth-inputs"
                         class="form-control"
                         formControlName="password"
-                        placeholder="Password">
+                        placeholder="...">
             </div>
             <button
                     class="btn btn-primary"

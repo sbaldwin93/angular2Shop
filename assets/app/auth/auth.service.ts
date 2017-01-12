@@ -47,4 +47,10 @@ export class AuthService {
              return this.router.navigateByUrl('items/items');
         }
     }
+    notLoggedIn() {
+        const checkAuth = localStorage.getItem('token');
+        if(checkAuth == null) {
+             return this.router.navigateByUrl('auth/signin');
+        }
+    }
 }
