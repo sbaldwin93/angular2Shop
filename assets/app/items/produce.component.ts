@@ -42,8 +42,6 @@ export class ProduceComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.itemService.itemIsEdit.subscribe(
-            (item: Item) => this.item = item
-        );
+        
     }
 }

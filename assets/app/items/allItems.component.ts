@@ -8,6 +8,17 @@ import { Item } from "./item.model";
     selector: 'app-allItems',
     templateUrl: './allItems.component.html'
 })
-export class AllItemsComponent {
-    
+export class AllItemsComponent  implements OnInit {
+    items: Item[];
+
+    constructor(private itemService: ItemService) {}
+
+    ngOnInit() {
+        this.itemService.getItems()
+            .subscribe(
+                (items: Item[]) => {
+                    this.items = items;
+                }
+            );
+    }
 }
